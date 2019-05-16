@@ -3,3 +3,8 @@ services:
     class: Drupal\hello\Routing\HelloRouteSubscriber
     tags:
       - { name: event_subscriber }
+  hello.default:
+    class: Drupal\hello\EventSubscriber\HelloSubscriber
+    arguments: []
+    tags:
+      - { name: event_subscriber }
